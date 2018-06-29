@@ -1,0 +1,94 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+<!-- begin resources -->
+<div id="resource">
+    <div class="w3-container">
+        <div>
+            <div class="w3-row">
+                <a href="javascript:void(0)" onclick="openCity(event, 'tutorial');">
+                    <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-large"><b>Tutorial Sites</b></div>
+                </a>
+                <a href="javascript:void(0)" onclick="openCity(event, 'software');">
+                    <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-large"><b>Software Downloads</b></div>
+                </a>
+                <a href="javascript:void(0)" onclick="openCity(event, 'misc');">
+                    <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-large"><b>Miscellaneous Online Tools</b></div>
+                </a>
+                <a href="javascript:void(0)" onclick="openCity(event, 'icmat');">
+                    <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding w3-large"><b>i.c.stars Materials</b></div>
+                </a>
+            </div>
+
+
+            <!--div for tutorial sites-->
+            <div id="tutorial" class="w3-container city  " style="display:block">
+                <h2 id="tabtop"></h2>
+                <div class="list-group">
+                    <a href="https://www.codecademy.com" class="list-group-item w3-large" style="background-color:#C0C0C0; border-color: #C0C0C0;" target="_blank">Codecademy</a>
+                    <a href="https://www.w3schools.com" class="list-group-item w3-large" target="_blank">W3Schools</a>
+                    <a href="https://www.coursera.org" class="list-group-item w3-large" style="background-color:#C0C0C0; border-color: #C0C0C0;" target="_blank">Coursera</a>
+                    <a href="https://www.khanacademy.org" class="list-group-item w3-large" target="_blank">Khan Academy</a>
+                    <a href="https://www.dofactory.com" class="list-group-item w3-large" style="background-color:#C0C0C0; border-color: #C0C0C0;" target="_blank">dofactory</a>
+                    <a href="https://freecodecamp.org" class="list-group-item w3-large" target="_blank">freeCodeCamp</a>
+                </div>
+            </div>
+            <!--div end for tutorial sites-->
+            <!-- div for software download locations -->
+            <div id="software" class=" w3-container city" style="display:none">
+                <h2 id="tabtop"></h2>
+                <div class="list-group">
+                    <a href="https://code.visualstudio.com" class="list-group-item w3-large" style="background-color:#C0C0C0; border-color: #C0C0C0;" target="_blank">Visual Studio Code</a>
+                    <a href="https://git-scm.com/downloads" class="list-group-item w3-large" target="_blank">Git Bash</a>
+                    <a href="https://pencil.evolus.vn" class="list-group-item w3-large" style="background-color:#C0C0C0; border-color: #C0C0C0;" target="_blank">Pencil</a>
+                    <a href="https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio" class="list-group-item w3-large" target="_blank">Visual Studio 2017</a>
+                    <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017" class="list-group-item w3-large"
+                       style="background-color:#C0C0C0; border-color: #C0C0C0;" target="_blank">SQL Server Management Studio</a>
+                    <a href="https://gimp.org" class="list-group-item w3-large" target="_blank">Gimp</a>
+                </div>
+            </div>
+            <!-- div end for software download locations -->
+            <!-- div for misc online coding resources -->
+            <div id="misc" class=" w3-container city " style="display:none">
+                <h2 id="tabtop"></h2>
+                <div class="list-group-danger">
+                    <a href="https://stackoverflow.com" class="list-group-item w3-large" style="background-color:#C0C0C0; border-color: #C0C0C0;" target="_blank">Stack Overflow</a>
+                    <a href="https://trello.com" class="list-group-item w3-large" target="_blank">Trello</a>
+                    <a href="https://slack.com" class="list-group-item w3-large" style="background-color:#C0C0C0; border-color: #C0C0C0;" target="_blank">Slack</a>
+                    <a href="https://fontawesome.com" class="list-group-item w3-large" target="_blank">Font Awesome</a>
+                    <a href="https://prezi.com" class="list-group-item w3-large" style="background-color:#C0C0C0; border-color: #C0C0C0;" target="_blank">Prezi</a>
+                </div>
+            </div>
+            <!-- div end for misc online coding resources-->
+            <!-- div end for icstars materials -->
+            <div id="icmat" class=" w3-container city " style="display:none">
+                <h2 id="tabtop"></h2>
+                <div class="list-group">
+                    <a href="#" class="list-group-item w3-large" style="background-color:#C0C0C0; border-color: #C0C0C0;">Coming Soon</a>
+                    <a href="#" class="list-group-item"></a>
+
+                </div>
+            </div>
+            <!-- div end for icstars materials-->
+        </div>
+    </div>
+</div>
+
+<!-- JS FOR W3 TAB -->
+<script>
+    function openCity(evt, cityName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-border-red";
+    }
+</script>
